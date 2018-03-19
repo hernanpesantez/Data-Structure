@@ -1,0 +1,40 @@
+package DS_LinkedList;
+
+public class DNode<T>{
+    private T data;
+    private DNode<T> next;
+    private DNode<T> prev;
+
+
+    public DNode(T data, DNode<T> prev, DNode<T> next){
+        this.data=data;
+        this.next=next;
+        this.prev=prev;
+    }
+
+    public void setNext(DNode<T> next) {
+        this.next = next;
+    }
+
+    public DNode<T> getNext() {
+        return next;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public DNode<T> getPrev() {
+        return prev;
+    }
+
+    public void setPrev(DNode<T> prev) {
+        this.prev = prev;
+    }
+
+
+}
