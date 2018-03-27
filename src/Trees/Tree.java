@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import java.util.Iterator;
 
-public class Tree {
+public class Tree<T> {
     public TNode root;
     protected int size;
 

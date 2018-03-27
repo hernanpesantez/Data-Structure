@@ -55,6 +55,21 @@ public class LinkedList<T> {
 
     }
 
+
+
+    public Node<T> lastButOne() throws Exception{
+        Node<T> current =head;
+        while(current!=null){
+            if(current.getNext()==null){
+                return current;
+            }else {
+                throw new Exception("No such a Node");
+            }
+        }
+        return null;
+    }
+
+
     public String toString() {
         String ans = "";
         Node<T> n = head;

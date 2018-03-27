@@ -12,6 +12,8 @@ public class GTNode<T> implements TNode {
     GTNode<T> parent;
     private ArrayList<TNode> children;
 
+
+
     public GTNode(T d, GTNode<T> p) {
         parent = p;
         data = d;

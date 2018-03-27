@@ -1,37 +1,38 @@
 package BinaryTrees;
 
 import DS_LinkedList.Node;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class BinaryNode<T> extends Node<T> {
-    BinaryNode<T> left, right;
+public class BNode<T> extends Node<T> {
+    BNode<T> left, right;
 
-    public BinaryNode(T data, BinaryNode<T> parent,BinaryNode<T> left,BinaryNode<T> right){
+    public BNode(T data, BNode<T> parent, BNode<T> left, BNode<T> right){
         setData(data);
         setParent(parent);
         this.left=left;
         this.right=right;
     }
-    public void setLeft(BinaryNode<T> left){
+    public void setLeft(BNode<T> left){
         this.left=left;
 
     }
-    public void setRight(BinaryNode<T> right){
+    public void setRight(BNode<T> right){
         this.right=right;
 
     }
 
-    public BinaryNode<T> getLeft(){
+    public BNode<T> getLeft(){
         return left;
     }
 
-    public BinaryNode<T> getRight(){
+    public BNode<T> getRight(){
         return right;
     }
 
-    public Iterator<BinaryNode<T>> chlidren(){
-        ArrayList<BinaryNode<T>> v = new ArrayList<>();
+    public Iterator<BNode<T>> chlidren(){
+        ArrayList<BNode<T>> v = new ArrayList<>();
         if(left!=null){
             v.add(left);
         }
@@ -41,7 +42,7 @@ public class BinaryNode<T> extends Node<T> {
         return v.iterator();
     }
 
-    public void removeChaild(BinaryNode<T> n){
+    public void removeChild(BNode<T> n){
         if(getLeft()==n){
             setLeft(null);
         }
